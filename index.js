@@ -1,6 +1,6 @@
 const zlib = require("zlib"); 
 
-module.exports.blueprintDecode = (bpStr) => {
+module.exports.decodeStr = (bpStr) => {
     if(!bpStr || bpStr.length <= 1){
         return null;
     }
@@ -9,13 +9,13 @@ module.exports.blueprintDecode = (bpStr) => {
     return JSON.parse(bpmDecodeInflated.toString('utf-8'));
 }
 
-module.exports.blueprintEncode = (bpJson) => {
+module.exports.encodeJson = (bpJson) => {
     let deflated = zlib.deflateSync(JSON.stringify(bpJson), { level: 9 });
     return "0" + deflated.toString('base64');
 }
 
 module.exports.listEntities = (bpStr) => {
-    const bpObj = this.blueprintDecode(bpStr);
+    const bpObj = this.decodeStr(bpStr);
     if(!bpObj.blueprint || !bpObj.blueprint.entities){
         return null;
     }

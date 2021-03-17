@@ -1,8 +1,8 @@
 {
   "name": "factorio-blueprint",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "factorio blueprint lib : decode, encode, list entities",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
