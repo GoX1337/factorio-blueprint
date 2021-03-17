@@ -1,12 +1,12 @@
 {
-  "name": "factorio-blueprint",
+  "name": "factorio-blueprints",
   "version": "1.0.0",
-  "description": "factorio blueprint lib : decode, encode, list entities",
+  "description": "factorio blueprints lib : decode, encode, list entities",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
+  "author": "gox1337",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.4",
